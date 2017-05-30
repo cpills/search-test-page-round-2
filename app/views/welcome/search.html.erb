@@ -1,0 +1,10 @@
+<h1>String Searching</h1>
+<p>Here are the search results: </p>
+
+
+<% @filtered_sentences.each do |sentence| %>
+  <%= sentence %>
+<% end %>
+<% if @filtered_sentences.blank? %>
+    <p>There are no sentences containing the string: "<%= params[:search_query] %>".</p>
+<% end %>
